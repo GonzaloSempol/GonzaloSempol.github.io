@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+	<meta name="description" content="Mi nombre es Gonzalo Sempol, estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. A continuación se encuentra mi portfolio de ML.">
+	<meta property="og:description" content="Mi nombre es Gonzalo Sempol, estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. A continuación se encuentra mi portfolio de ML.">
+	<meta property="og:title" content="El proceso CRISP-DM" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="/el-proceso-crisp-dm.html" />
+		<meta property="og:image" content="/images/avatar.png" />
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Machine Learning Portfolio</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" crossorigin="anonymous">
+
+		<!-- Feeds -->
+
+		<!-- Analytics -->
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.png">
+					Machine Learning Portfolio
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead">Mi nombre es Gonzalo Sempol, estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. A continuación se encuentra mi portfolio de ML. </p>
+			<p></p>
+		</div>
+			<ul class="sidebar-nav">
+					<li><a href="/el-proceso-crisp-dm"><b>El proceso CRISP-DM </b></a></li>
+					<li><a href="/caso-de-estudio-crisp-dm-para-titanic-pandassklearn"><b>Caso de estudio </b> - CRISP-DM para Titanic - Pandas/SkLearn</a></li>
+					<li><a href="/caso-de-estudio-crisp-dm-para-chronic-kidney-disease-rapidminer.html"><b>Caso de estudio</b> - CRISP-DM para Chronic Kidney Disease - RapidMiner</a></li>
+					<li><a href="/prediccion-de-segundo-ataque-cardiaco-logistic-regression-con-sklearn-vs-rapidminer">Predicción de segundo ataque Cardiaco - LR con sklearn vs Rapidminer</a></li>
+					<li><a href="knn-para-wine-analisis-datos-normalizados-vs-sin-normalizar">kNN para Wine en RapidMiner </a></li>
+					<li><a href="lda-en-rapidminer-con-cross-validation">LDA en RapidMiner con cross validation</a></li>
+			</ul>
+		<nav class="sidebar-social">
+					<a class="sidebar-social-item" href="https://github.com/gonzalosempol" target="_blank">
+						<i class="fa fa-github"></i>
+					</a>
+					<a class="sidebar-social-item" href="https://uy.linkedin.com/in/gonzalo-sempol-983b8638" target="_blank">
+						<i class="fa fa-linkedin"></i>
+					</a>
+			<a class="sidebar-social-item" href="/">
+				<i class="fa fa-rss"></i>
+			</a>
+		</nav>
+			<p class="sidebar-footer">2023</p>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">El proceso CRISP-DM</h1>
+	<span class="post-date">ju. 12 octubre 2023</span>
+	<p><strong>CRISP-DM</strong> (Cross-Industry Standard Process for Data Mining) es un marco de trabajo estándar y ampliamente utilizado en la industria para guiar el proceso de desarrollo de proyectos de minería de datos, es un marco flexible que se puede adaptar a las necesidades específicas de cada proyecto y organización. Ayuda a los equipos a estructurar y organizar el proceso de minería de datos, lo que a su vez puede aumentar la eficiencia y la calidad de los resultados.</p>
+<p>Consta de 6 pasos
+<img alt="CRISP-DM" src="images/crispdm.png"></p>
+<ol>
+<li><strong>Comprensión del Negocio:</strong>
+En esta etapa, se busca comprender los objetivos y
+requisitos del negocio para el proyecto. Se definen los objetivos de la minería de datos en términos de lo que se espera lograr y cómo esos objetivos se alinean con los objetivos generales del negocio.</li>
+<li><strong>Comprensión de los Datos:</strong> En esta etapa, se recopila información sobre los datos disponibles y se realiza un análisis exploratorio para comprender la naturaleza y calidad de los datos. Se trata de identificar problemas de calidad de datos, relaciones entre variables y posibles patrones.</li>
+<li><strong>Preparación de los Datos:</strong> En esta etapa, se seleccionan y preparan los datos necesarios para el modelado. Esto puede incluir limpieza de datos, transformaciones y selección de variables relevantes. El objetivo es tener un conjunto de datos listo para el modelado.</li>
+<li><strong>Modelado:</strong> En esta etapa, se eligen y se aplican técnicas de modelado, como algoritmos de machine learning o estadísticos, para construir modelos predictivos o descriptivos. Se ajustan los modelos y se evalúa su rendimiento utilizando métricas adecuadas.</li>
+<li><strong>Evaluación:</strong> En esta etapa, se evalúan los modelos construidos y se determina su calidad en función de los objetivos del proyecto y las métricas definidas. Esto puede implicar ajustes en los modelos o la selección de un modelo final.</li>
+<li><strong>Despliegue:</strong> En esta etapa, los modelos seleccionados se implementan en el entorno operativo del negocio. Esto puede involucrar la integración de los modelos en sistemas existentes o la creación de interfaces para permitir que los usuarios finales accedan a las predicciones.</li>
+</ol>
+</div>
+		</div>
+	</body>
+</html>

@@ -6,8 +6,8 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 		<!-- Metadata -->
-	<meta name="description" content="Hola! Mi nombre es Gonzalo Sempol, soy estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. Este es mi portfolio de Machine Learning.">
-	<meta property="og:description" content="Hola! Mi nombre es Gonzalo Sempol, soy estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. Este es mi portfolio de Machine Learning.">
+	<meta name="description" content="Mi nombre es Gonzalo Sempol, estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. A continuación se encuentra mi portfolio de ML.">
+	<meta property="og:description" content="Mi nombre es Gonzalo Sempol, estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. A continuación se encuentra mi portfolio de ML.">
 	<meta property="og:title" content="Caso de estudio - CRISP-DM para Chronic Kidney Disease - Rapidminer" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="/caso-de-estudio-crisp-dm-para-chronic-kidney-disease-rapidminer.html" />
@@ -44,11 +44,12 @@
 				</a>
 			</h1>
 			<p class="lead"></p>
-			<p class="lead">Hola! Mi nombre es Gonzalo Sempol, soy estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. Este es mi portfolio de Machine Learning. </p>
+			<p class="lead">Mi nombre es Gonzalo Sempol, estudiante de la carrera Ingenieria en Informática en la Universidad Católica del Uruguay. A continuación se encuentra mi portfolio de ML. </p>
 			<p></p>
 		</div>
 			<ul class="sidebar-nav">
-					<li><a href="/caso-de-estudio-crisp-dm-para-titanic-pandassklearn"><b> Caso de estudio </b> - CRISP-DM para Titanic - Pandas/SkLearn</a></li>
+					<li><a href="/el-proceso-crisp-dm"><b>El proceso CRISP-DM </b></a></li>
+					<li><a href="/caso-de-estudio-crisp-dm-para-titanic-pandassklearn"><b>Caso de estudio </b> - CRISP-DM para Titanic - Pandas/SkLearn</a></li>
 					<li><a href="/caso-de-estudio-crisp-dm-para-chronic-kidney-disease-rapidminer.html"><b>Caso de estudio</b> - CRISP-DM para Chronic Kidney Disease - RapidMiner</a></li>
 					<li><a href="/prediccion-de-segundo-ataque-cardiaco-logistic-regression-con-sklearn-vs-rapidminer">Predicción de segundo ataque Cardiaco - LR con sklearn vs Rapidminer</a></li>
 					<li><a href="knn-para-wine-analisis-datos-normalizados-vs-sin-normalizar">kNN para Wine en RapidMiner </a></li>
@@ -70,7 +71,7 @@
 </div>		<div class="content container">
 <div class="post">
 	<h1 class="post-title">Caso de estudio - CRISP-DM para Chronic Kidney Disease - Rapidminer</h1>
-	<span class="post-date">do. 15 octubre 2023</span>
+	<span class="post-date">mi. 11 octubre 2023</span>
 	<p>El objetivo de este trabajo es aplicar el proceso completo CRISP-DM al dataset Chronic Kidney Disease de la UCI: <a href="https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease">Chronic Kidney Disease</a> con el fin de encontrar un modelo de clasificación que permita predecir la enfermedad a partir de otros atributos a fin de ser tratada.</p>
 <h1>1-Comprensión del negocio</h1>
 <blockquote>
@@ -84,7 +85,7 @@
 <div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nv">age</span><span class="w">     </span><span class="o">-</span><span class="w">   </span><span class="nv">age</span>
 <span class="w">        </span><span class="nv">bp</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">blood</span><span class="w"> </span><span class="nv">pressure</span>
 <span class="w">        </span><span class="nv">sg</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">specific</span><span class="w"> </span><span class="nv">gravity</span>
-<span class="w">        </span><span class="nv">al</span><span class="w">      </span><span class="o">-</span><span class="w">       </span><span class="nv">albumin</span>
+<span class="w">        </span><span class="nv">al</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">albumin</span>
 <span class="w">        </span><span class="nv">su</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">sugar</span>
 <span class="w">        </span><span class="nv">rbc</span><span class="w">     </span><span class="o">-</span><span class="w">   </span><span class="nv">red</span><span class="w"> </span><span class="nv">blood</span><span class="w"> </span><span class="nv">cells</span>
 <span class="w">        </span><span class="nv">pc</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">pus</span><span class="w"> </span><span class="nv">cell</span>
@@ -95,17 +96,17 @@
 <span class="w">        </span><span class="nv">sc</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">serum</span><span class="w"> </span><span class="nv">creatinine</span>
 <span class="w">        </span><span class="nv">sod</span><span class="w">     </span><span class="o">-</span><span class="w">   </span><span class="nv">sodium</span>
 <span class="w">        </span><span class="nv">pot</span><span class="w">     </span><span class="o">-</span><span class="w">   </span><span class="nv">potassium</span>
-<span class="w">        </span><span class="nv">hemo</span><span class="w">        </span><span class="o">-</span><span class="w">   </span><span class="nv">hemoglobin</span>
+<span class="w">        </span><span class="nv">hemo</span><span class="w">    </span><span class="o">-</span><span class="w">   </span><span class="nv">hemoglobin</span>
 <span class="w">        </span><span class="nv">pcv</span><span class="w">     </span><span class="o">-</span><span class="w">   </span><span class="nv">packed</span><span class="w"> </span><span class="nv">cell</span><span class="w"> </span><span class="nv">volume</span>
 <span class="w">        </span><span class="nv">wc</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">white</span><span class="w"> </span><span class="nv">blood</span><span class="w"> </span><span class="nv">cell</span><span class="w"> </span><span class="nv">count</span>
 <span class="w">        </span><span class="nv">rc</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">red</span><span class="w"> </span><span class="nv">blood</span><span class="w"> </span><span class="nv">cell</span><span class="w"> </span><span class="nv">count</span>
 <span class="w">        </span><span class="nv">htn</span><span class="w">     </span><span class="o">-</span><span class="w">   </span><span class="nv">hypertension</span>
 <span class="w">        </span><span class="nv">dm</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">diabetes</span><span class="w"> </span><span class="nv">mellitus</span>
 <span class="w">        </span><span class="nv">cad</span><span class="w">     </span><span class="o">-</span><span class="w">   </span><span class="nv">coronary</span><span class="w"> </span><span class="nv">artery</span><span class="w"> </span><span class="nv">disease</span>
-<span class="w">        </span><span class="nv">appet</span><span class="w">       </span><span class="o">-</span><span class="w">   </span><span class="nv">appetite</span>
+<span class="w">        </span><span class="nv">appet</span><span class="w">   </span><span class="o">-</span><span class="w">   </span><span class="nv">appetite</span>
 <span class="w">        </span><span class="nv">pe</span><span class="w">      </span><span class="o">-</span><span class="w">   </span><span class="nv">pedal</span><span class="w"> </span><span class="nv">edema</span>
 <span class="w">        </span><span class="nv">ane</span><span class="w">     </span><span class="o">-</span><span class="w">   </span><span class="nv">anemia</span>
-<span class="w">        </span><span class="nv">class</span><span class="w">       </span><span class="o">-</span><span class="w">   </span><span class="nv">class</span>
+<span class="w">        </span><span class="nv">class</span><span class="w">   </span><span class="o">-</span><span class="w">   </span><span class="nv">class</span>
 </code></pre></div>
 
 <p>Detalles de los atributos</p>
@@ -113,16 +114,16 @@
 <span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">years</span>
 
 <span class="mf">2.</span><span class="n">Blood</span><span class="w"> </span><span class="n">Pressure</span><span class="p">(</span><span class="n">numerical</span><span class="p">)</span>
-<span class="w">  </span><span class="n">bp</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">mm</span><span class="o">/</span><span class="n">Hg</span>
+<span class="w">    </span><span class="n">bp</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">mm</span><span class="o">/</span><span class="n">Hg</span>
 
 <span class="mf">3.</span><span class="n">Specific</span><span class="w"> </span><span class="n">Gravity</span><span class="p">(</span><span class="n">nominal</span><span class="p">)</span>
 <span class="w">    </span><span class="n">sg</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mf">1.005</span><span class="p">,</span><span class="mf">1.010</span><span class="p">,</span><span class="mf">1.015</span><span class="p">,</span><span class="mf">1.020</span><span class="p">,</span><span class="mf">1.025</span><span class="p">)</span>
 
 <span class="mf">4.</span><span class="n">Albumin</span><span class="p">(</span><span class="n">nominal</span><span class="p">)</span>
-<span class="w">       </span><span class="n">al</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">)</span>
+<span class="w">    </span><span class="n">al</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">)</span>
 
 <span class="mf">5.</span><span class="n">Sugar</span><span class="p">(</span><span class="n">nominal</span><span class="p">)</span>
-<span class="w">       </span><span class="n">su</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">)</span>
+<span class="w">    </span><span class="n">su</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">)</span>
 
 <span class="mf">6.</span><span class="n">Red</span><span class="w"> </span><span class="n">Blood</span><span class="w"> </span><span class="n">Cells</span><span class="p">(</span><span class="n">nominal</span><span class="p">)</span>
 <span class="w">    </span><span class="n">rbc</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">normal</span><span class="p">,</span><span class="n">abnormal</span><span class="p">)</span>
